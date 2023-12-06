@@ -27,7 +27,7 @@ from day25 import day25
 def cli_fun():
     day_num = input("AoC CLI, Input Day (1-25): ")
     part_2 = input("Part 2? (y/n): ")
-    try:
+    if True:
         if (int(day_num) < 1 or int(day_num) > 25) or (
             part_2.lower() != "y" and part_2.lower() != "n"
         ):
@@ -42,9 +42,9 @@ def cli_fun():
             f1 = open(day_input, "r")
             eval("day" + (day_num) + "(f1.read(), part_2)")
             f1.close()
-    except:
-        print("Invalid Input (or buggy code)!")
-        cli_fun()
+    #except:
+    #    print("Invalid Input (or buggy code)!")
+    #    cli_fun()
 
 
 cli_fun()
